@@ -1,0 +1,10 @@
+const hammingDistance = (str1, str2) => {
+    if (str1.length !== str2.length) return "Strings must be of equal length";
+    return [...str1].reduce((distance, char, index) => 
+        distance + (char !== str2[index] ? 1 : 0), 0);
+};
+
+console.log(hammingDistance("karolin", "kathrin"));
+console.log(hammingDistance("karolin", "kerstin"));
+console.log(hammingDistance("1011101", "1001001"));
+console.log(hammingDistance("2173896", "2233796"));
